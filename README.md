@@ -2,6 +2,8 @@
 
 I have a 32 oz. tumbler from GWL that cost $28. Refills are only $24, this web app will serve as my long term tracking to measure the value of the cup over the lifetime of its usage.
 
+![20250701131846_9a61924b.png](https://cdn.statically.io/gh/pypeaday/images.pype.dev/main/blog-media/20250701131846_9a61924b.png)
+
 ## Stack
 
 - **Backend**: FastAPI, SQLAlchemy
