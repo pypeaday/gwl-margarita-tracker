@@ -125,6 +125,10 @@ celerybeat.pid
 
 # Environments
 .env
+
+# Data
+/data/
+margaritas.db
 .venv
 env/
 venv/

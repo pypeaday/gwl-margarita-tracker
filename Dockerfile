@@ -12,6 +12,7 @@ WORKDIR /app
 
 # Create a non-root user and set permissions
 RUN useradd -m appuser && \
+    mkdir -p /app/data && \
     chown -R appuser:appuser /app && \
     mkdir -p /opt/venv && \
     chown -R appuser:appuser /opt/venv
