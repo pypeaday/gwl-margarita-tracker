@@ -1,0 +1,21 @@
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
+    <div class="bg-blue-800 p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold text-blue-200">Total Refills</h2>
+        <p class="text-4xl font-bold text-white">{{ refill_count }}</p>
+    </div>
+    <div class="bg-red-800 p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold text-red-200">Total Spent</h2>
+        <p class="text-4xl font-bold text-white">${{ "%.2f"|format(total_spent) }}</p>
+    </div>
+    <div class="bg-purple-800 p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold text-purple-200">Cost Per Drink</h2>
+        <p class="text-4xl font-bold text-white">${{ "%.2f"|format(cost_per_drink) }}</p>
+    </div>
+    <div class="bg-green-800 p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold text-green-200">Total Savings</h2>
+        <p class="text-4xl font-bold text-white">${{ "%.2f"|format(savings) }}</p>
+        {% if break_even %}
+        <p class="text-green-200 text-sm mt-2 animate-pulse">🎉 You're saving money! 🎉</p>
+        {% endif %}
+    </div>
+</div>
