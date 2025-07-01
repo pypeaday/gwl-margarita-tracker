@@ -11,15 +11,15 @@ get-version:
 # Build Docker image with version tag
 build:
     docker context use default
-    just get-version | xargs -I {} docker build -t ${REGISTRY}/gwl-margarita-tracket:{} .
-    docker tag ${REGISTRY}/gwl-margarita-tracket:$(just get-version) ${REGISTRY}/gwl-margarita-tracket:latest
+    just get-version | xargs -I {} docker build -t ${REGISTRY}/gwl-margarita-tracker:{} .
+    docker tag ${REGISTRY}/gwl-margarita-tracker:$(just get-version) ${REGISTRY}/gwl-margarita-tracker:latest
 
 # Push Docker image with version tag
 build-and-push:
     docker context use default
     just build
-    just get-version | xargs -I {} docker push ${REGISTRY}/gwl-margarita-tracket:{}
-    docker push ${REGISTRY}/gwl-margarita-tracket:latest
+    just get-version | xargs -I {} docker push ${REGISTRY}/gwl-margarita-tracker:{}
+    docker push ${REGISTRY}/gwl-margarita-tracker:latest
 
 # Release a new version (bump version, create release, build/push Docker)
 release type="patch":
